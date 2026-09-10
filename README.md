@@ -16,6 +16,22 @@
 
 </div>
 
+<!-- domain-workflow:start -->
+
+## Domain workflow · Fluxo do domínio
+
+```mermaid
+flowchart TD
+  A["Editable grid / Grade editável"] --> B["Inflate blocked cells / Expandir células bloqueadas"]
+  B --> C["Weighted A-star search / Busca A-estrela ponderada"]
+  C --> D{"Destination reachable? / Destino alcançável?"}
+  D -->|Yes / Sim| E["Path and written directions / Caminho e instruções por escrito"]
+  D -->|No / Não| F["Explain blocked route / Explicar rota bloqueada"]
+  E --> G["Step-by-step replay / Reprodução passo a passo"]
+```
+
+<!-- domain-workflow:end -->
+
 <a id="english"></a>
 
 ## English
