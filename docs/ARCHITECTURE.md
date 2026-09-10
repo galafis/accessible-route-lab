@@ -38,7 +38,6 @@ Exports contain the input scenario plus an `experiment` object. Import reads the
 
 Editing or changing a constraint stops playback and recalculates. The grid has one tab stop and arrow-key navigation. Enter edits the selected cell. Written directions remain available independently of replay. A route at the destination cannot be played. No map is persisted automatically; export is the explicit way to keep an experiment.
 
-
 ## Hosting and maintenance
 
 The repository root is deployable as static files on GitHub Pages. `.nojekyll` prevents template processing. The development server rejects hidden and out-of-root paths; it is not intended as an internet-facing production service. GitHub Actions has read-only repository permissions. There is no build step and no package lockfile because there are no package dependencies.

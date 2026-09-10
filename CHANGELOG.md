@@ -4,7 +4,7 @@
 
 Initial public software release of Accessible Route Lab.
 
-- Deterministic route planning: Four-connected A* with Manhattan distance, stable tie-breaking, and configurable rough-surface cost.
+- Deterministic route planning: Four-connected A\* with Manhattan distance, stable tie-breaking, and configurable rough-surface cost.
 - Clearance experiments: Obstacle inflation using a conservative square envelope, including map-edge clearance.
 - Editable maps: Place obstacles, rough surfaces, start points, and destinations using a pointer or keyboard.
 - Inspectable results: Distance, direction changes, weighted cost, written compass directions, and step-by-step replay.

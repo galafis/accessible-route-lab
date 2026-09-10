@@ -6,12 +6,12 @@ How do footprint clearance, surface penalties, and route descriptions affect the
 
 ## Reproducible experiments
 
-| Experiment | Change | Observe |
-|---|---|---|
-| Narrow passage | Clearance 0 → 1 | Reachable route becomes blocked |
-| Courtyard | Rough cost 1 → 8 | Compare smooth detours with direct rough routes |
-| Learning centre | Move destination | Compare distance, turns, and directions |
-| Closed corridor | Place a complete barrier | No path; replay disabled |
+| Experiment      | Change                   | Observe                                         |
+| --------------- | ------------------------ | ----------------------------------------------- |
+| Narrow passage  | Clearance 0 → 1          | Reachable route becomes blocked                 |
+| Courtyard       | Rough cost 1 → 8         | Compare smooth detours with direct rough routes |
+| Learning centre | Move destination         | Compare distance, turns, and directions         |
+| Closed corridor | Place a complete barrier | No path; replay disabled                        |
 
 Record the scenario JSON, selected clearance and rough cost, result, and a short interpretation. Distance and weighted cost answer different questions. A low-cost path is only optimal within the stated grid model.
 
