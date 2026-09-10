@@ -1,0 +1,29 @@
+[
+  {
+    "id": "learning-centre",
+    "file": "learning-centre.json",
+    "expected": "learning-centre.expected.json",
+    "label": {
+      "en": "Learning-centre route",
+      "pt": "Rota no centro educacional"
+    }
+  },
+  {
+    "id": "courtyard",
+    "file": "courtyard.json",
+    "expected": "courtyard.expected.json",
+    "label": {
+      "en": "Courtyard with surface penalties",
+      "pt": "Pátio com penalidades de superfície"
+    }
+  },
+  {
+    "id": "narrow-passage",
+    "file": "narrow-passage.json",
+    "expected": "narrow-passage.expected.json",
+    "label": {
+      "en": "Passage blocked by a wider envelope",
+      "pt": "Passagem bloqueada pelo envelope maior"
+    }
+  }
+]

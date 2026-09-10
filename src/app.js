@@ -1,3 +1,4 @@
+import { initializeLocalization } from './i18n.js';
 import { makeScenario, validateScenario, planRoute, routeInstructions } from './planner.js';
 import { downloadJSON, readJSONFile } from './browser.js';
 
@@ -152,11 +153,13 @@ $('tools').addEventListener('click', (event) => {
 });
 $('scenario').onchange = () => {
   scenario = makeScenario($('scenario').value);
+  $('map-title').removeAttribute('data-verbatim');
   focusIndex = 0;
   calculate();
 };
 $('reset').onclick = () => {
   scenario = makeScenario($('scenario').value);
+  $('map-title').removeAttribute('data-verbatim');
   focusIndex = 0;
   calculate();
 };
@@ -197,6 +200,7 @@ $('import').onclick = async () => {
   try {
     const next = validateScenario(await readJSONFile($('import-file').files[0]));
     scenario = next;
+    $('map-title').setAttribute('data-verbatim', '');
     focusIndex = 0;
     calculate();
     $('status').textContent = `Loaded ${scenario.title}. ${result.reason}`;
@@ -205,3 +209,5 @@ $('import').onclick = async () => {
   }
 };
 calculate();
+
+initializeLocalization();

@@ -8,7 +8,9 @@
 
 **Explore accessible routes before a robot moves.**
 
-[Open the live demo](https://galafis.github.io/accessible-route-lab/) · [Technical design](docs/ARCHITECTURE.md) · [Project guide](docs/RESEARCH.md) · [Contribute](CONTRIBUTING.md)
+**Explore rotas acessíveis antes do movimento do robô.**
+
+[Live demo · Demonstração](https://galafis.github.io/accessible-route-lab/) · [Architecture · Arquitetura](docs/ARCHITECTURE.md) · [Project guide · Guia do projeto](docs/RESEARCH.md) · [Contribute · Contribuir](CONTRIBUTING.md)
 
 [![Checks](https://github.com/galafis/accessible-route-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/accessible-route-lab/actions/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-52665e)
@@ -81,6 +83,7 @@ Use **Node.js 22 or newer**. No dependency installation, keys, or account is req
 git clone https://github.com/galafis/accessible-route-lab.git
 cd accessible-route-lab
 npm test
+npm run examples
 npm start
 ```
 
@@ -115,7 +118,7 @@ scripts/serve.mjs       Local static development server
 
 ## Verification
 
-The initial release includes **19 automated tests**. Run `npm test` for the behavioral suite or `npm run test:coverage` for a local coverage report. The workflow runs the same suite on Linux and Windows with Node 22 and 24. See [validation notes](docs/VALIDATION.md) for the tested properties and remaining review work.
+The current suite includes **25 automated tests**. Run `npm test` for the behavioral suite or `npm run test:coverage` for a local coverage report. The workflow runs the same suite on Linux and Windows with Node 22 and 24. See [validation notes](docs/VALIDATION.md) for the tested properties and remaining review work.
 
 ## Status and boundaries
 
@@ -167,12 +170,12 @@ O simulador torna as premissas de uma rota verificáveis antes de um ensaio fís
 
 ### Experimente em dois minutos
 
-1. Abra **Narrow passage**. Com o envelope pontual, a rota atravessa a abertura.
-2. Selecione **Small envelope**. A passagem fica indisponível.
-3. Use **Open floor** para ampliar a abertura ou compare os outros mapas.
-4. Avance com **Next step** e exporte o experimento.
+1. Abra **Passagem estreita**. Com o envelope pontual, a rota atravessa a abertura.
+2. Selecione **Envelope pequeno**. A passagem fica indisponível.
+3. Use **Piso livre** para ampliar a abertura ou compare os outros mapas.
+4. Avance com **Próximo passo** e exporte o experimento.
 
-A interface da demonstração e os documentos técnicos estão em inglês. Este README apresenta a explicação completa em inglês e português. Todos os exemplos usam informações sintéticas.
+A demonstração e a documentação oferecem inglês e português. Use **Language / Idioma** para alternar a interface sem reiniciar o experimento. Todos os exemplos são sintéticos.
 
 ### Executar localmente
 
@@ -182,6 +185,7 @@ Requisito: **Node.js 22 ou superior**. Não é necessário instalar dependência
 git clone https://github.com/galafis/accessible-route-lab.git
 cd accessible-route-lab
 npm test
+npm run examples
 npm start
 ```
 
@@ -216,7 +220,7 @@ O arquivo [examples/narrow-passage.json](examples/narrow-passage.json) é um exe
 
 ### Testes e verificação
 
-A versão inicial contém **19 testes automatizados**. Execute `npm test` para reproduzir a suíte, ou `npm run test:coverage` para gerar um relatório local de cobertura. O status de cada commit pode ser consultado na aba **Actions**.
+A suíte atual contém **25 testes automatizados**. Execute `npm test` para reproduzir a suíte, ou `npm run test:coverage` para gerar um relatório local de cobertura. O status de cada commit pode ser consultado na aba **Actions**.
 
 A suíte verifica continuidade das rotas, obstáculos, folga, rejeição de entradas inválidas, imutabilidade e determinismo. Também compara o planejador com uma busca em largura independente em 80 mapas gerados com semente fixa.
 
@@ -240,3 +244,9 @@ Contribuições são bem-vindas conforme [CONTRIBUTING.md](CONTRIBUTING.md). Con
 Projetos relacionados: [Accessible Route Lab](https://github.com/galafis/accessible-route-lab), [Rescue Scenario Lab](https://github.com/galafis/rescue-scenario-lab) e [Inclusive Session Studio](https://github.com/galafis/inclusive-session-studio).
 
 [Voltar ao início](#english)
+
+## Language and reproducible examples · Idioma e exemplos reproduzíveis
+
+Use **Language / Idioma** in the demo header to switch between English and Portuguese. Changing the display language preserves the current experiment. Only the language preference is saved automatically. JSON identifiers and state codes remain stable. [Worked examples and expected results](docs/EXPERIMENTS.md) provide reproducible inputs and explicit numerical checks.
+
+Use **Language / Idioma** no cabeçalho para alternar inglês e português. A troca preserva o experimento atual. Apenas a preferência de idioma é salva automaticamente. Identificadores JSON e códigos de estado permanecem iguais. Os [exemplos comentados e resultados esperados](docs/EXPERIMENTS.md) oferecem entradas reproduzíveis e verificações numéricas explícitas.

@@ -387,3 +387,20 @@ input[type='file'] {
     font-size: 8px;
   }
 }
+
+.language-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+.language-control select {
+  width: auto;
+  max-width: 9rem;
+  margin: 0;
+  padding: 0.4rem;
+  font: inherit;
+}
+.topbar nav {
+  flex-wrap: wrap;
+}

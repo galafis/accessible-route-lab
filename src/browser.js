@@ -18,5 +18,11 @@ export function readJSONFile(file, maxBytes = 100000) {
   if (!file) return Promise.reject(new Error('Choose a JSON file first.'));
   if (file.size > maxBytes)
     return Promise.reject(new Error('File is too large. Maximum size: 100 KB.'));
-  return file.text().then((text) => JSON.parse(text));
+  return file.text().then((text) => {
+    try {
+      return JSON.parse(text);
+    } catch {
+      throw new Error('Invalid JSON. Check the file syntax.');
+    }
+  });
 }

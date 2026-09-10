@@ -1,13 +1,14 @@
 {
   "name": "accessible-route-lab",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "description": "Explore accessible routes before a robot moves.",
   "scripts": {
     "start": "node scripts/serve.mjs",
     "test": "node --test",
-    "test:coverage": "node --test --experimental-test-coverage"
+    "test:coverage": "node --test --experimental-test-coverage",
+    "examples": "node scripts/check-examples.mjs"
   },
   "engines": {
     "node": ">=22"
