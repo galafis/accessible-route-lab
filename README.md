@@ -18,6 +18,17 @@
 
 </div>
 
+<!-- connected-community:start -->
+## Continue the demonstration · Continue a demonstração
+
+**EN:** Compare a grid route here, then evaluate destinations, personal passage preferences and proposed venue improvements in the Python atlas.
+
+**PT:** Compare aqui um percurso em grade; depois avalie destinos, preferências de passagem e melhorias propostas do espaço no atlas em Python.
+
+[Venue Access Atlas](https://github.com/galafis/go2-pro-accessible-venue-audit) · [Connected walkthrough / Demonstração conectada](docs/CONNECTED_DEMO.md)
+
+<!-- connected-community:end -->
+
 <!-- domain-workflow:start -->
 
 ## Domain workflow · Fluxo do domínio
