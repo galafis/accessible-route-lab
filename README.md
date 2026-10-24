@@ -1,49 +1,29 @@
-<div align="center">
+# <div align="center">
 
-![Accessible Route Lab](assets/banner.svg)
+**Accessible route studies · Estudos de rotas acessíveis**
 
-# Accessible Route Lab
-
-[English](#english) · [Português](#portugues)
-
-**Explore accessible routes before a robot moves.**
-
-**Explore rotas acessíveis antes do movimento do robô.**
-
-[Live demo · Demonstração](https://galafis.github.io/accessible-route-lab/) · [Architecture · Arquitetura](docs/ARCHITECTURE.md) · [Project guide · Guia do projeto](docs/RESEARCH.md) · [Contribute · Contribuir](CONTRIBUTING.md)
+<p align="center"><img src="assets/project-overview.svg" width="960" alt="Workflow illustration: Editable grid → Weighted search → Written directions"></p>
 
 [![Checks](https://github.com/galafis/accessible-route-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/galafis/accessible-route-lab/actions/workflows/ci.yml)
-![License: MIT](https://img.shields.io/badge/license-MIT-52665e)
-![Runtime dependencies: 0](https://img.shields.io/badge/runtime_dependencies-0-52665e)
+[English](#english) · [Português](#portugues) · [Guided tour / Visita guiada](docs/SHOWCASE.md) · [Validation / Validação](docs/VALIDATION.md)
 
-</div>
+> **EN:** How do surface costs and clearance change a proposed route?<br>
+> **PT:** Como custo de piso e folga alteram um percurso proposto?
 
-<!-- connected-community:start -->
-## Continue the demonstration · Continue a demonstração
+## Start here · Comece aqui
 
-**EN:** Compare a grid route here, then evaluate destinations, personal passage preferences and proposed venue improvements in the Python atlas.
+| Goal · Objetivo | Where to go · Por onde começar |
+| --- | --- |
+| Understand a real example · Entender um exemplo concreto | [Walkthrough / Roteiro](docs/EXPERIMENTS.md) |
+| Reproduce and compare · Reproduzir e comparar | [Evidence tour / Visita às evidências](docs/SHOWCASE.md) |
+| Inspect the checks · Inspecionar as verificações | [Validation record / Registro de validação](docs/VALIDATION.md) · [CI](https://github.com/galafis/accessible-route-lab/actions/workflows/ci.yml) |
+| Explore in the browser · Explorar no navegador | [Public demonstration / Demonstração pública](https://galafis.github.io/accessible-route-lab/) |
 
-**PT:** Compare aqui um percurso em grade; depois avalie destinos, preferências de passagem e melhorias propostas do espaço no atlas em Python.
+**Example result · Resultado do exemplo:** Narrow passage: clearance 0 gives 7.5 model units of distance and cost 15; clearance 1 blocks the route. / Passagem estreita: folga 0 resulta em distância de 7,5 unidades do modelo e custo 15; folga 1 bloqueia a rota.
 
-[Venue Access Atlas](https://github.com/galafis/go2-pro-accessible-venue-audit) · [Connected walkthrough / Demonstração conectada](docs/CONNECTED_DEMO.md)
-
-<!-- connected-community:end -->
-
-<!-- domain-workflow:start -->
-
-## Domain workflow · Fluxo do domínio
-
-```mermaid
-flowchart TD
-  A["Editable grid / Grade editável"] --> B["Inflate blocked cells / Expandir células bloqueadas"]
-  B --> C["Weighted A-star search / Busca A-estrela ponderada"]
-  C --> D{"Destination reachable? / Destino alcançável?"}
-  D -->|Yes / Sim| E["Path and written directions / Caminho e instruções por escrito"]
-  D -->|No / Não| F["Explain blocked route / Explicar rota bloqueada"]
-  E --> G["Step-by-step replay / Reprodução passo a passo"]
-```
-
-<!-- domain-workflow:end -->
+**Try a comparison · Experimente uma comparação**<br>
+**EN:** Import narrow-passage, compare clearance 0 and 1, then distinguish distance from weighted cost.<br>
+**PT:** Importe narrow-passage, compare folgas 0 e 1 e separe distância de custo ponderado.
 
 <a id="english"></a>
 
